@@ -13,12 +13,29 @@ void main() {
   /*
     getInput 
     recebe o valor como string e converte em numero inteiro, depois retorna esse valor
+    caso o valor digitado seja algo diferente de um numero inteiro positivo, ele não fará o calculo
   */
 
 int getInput(){
   print("Entre com um numero inteiro positivo: ");
   String input = stdin.readLineSync() ?? "";
-  int userInput = int.parse(input);
+  if(input.isEmpty){
+    print("não pode ser vazio!\n");
+    return getInput();
+  }
+  int? userInput;
+  try{
+    
+    userInput = int.parse(input);
+    if(userInput<0){
+      print("não pode ser negativo\n");
+      return getInput();
+    }
+  }catch(e){
+    print("Valor não valido!\n");
+    return getInput();
+
+  }
   return userInput;
 }
 
