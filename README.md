@@ -7,7 +7,7 @@
 <p align="center">
 
 
-## :rocket: Tecnologias utilizada:
+## :rocket: Tecnologias utilizadas:
 
 -  [Chocolatey ](https://chocolatey.org/)    *  não obrigatório
 -  [Dart](https://dart.dev/)
